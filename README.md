@@ -2,6 +2,22 @@
 
 A warm, editorial website for Dr. Stephanie Pastrana, built with React, TypeScript, and Vite. Designed for the practice's pre-opening phase, with English and Spanish content, locally hosted typography, responsive layouts, accessible native dialogs, and a keyboard-operable before/after comparison.
 
+## Visual palette
+
+The palette follows Stephanie's olive-green preference while keeping the existing wordmark and layout. The supplied logo and office mockups are visual references only; they are not presented as an actual clinic or used as replacement logos.
+
+| Color           | Hex       | Role                                        |
+| --------------- | --------- | ------------------------------------------- |
+| Warm ivory      | `#F7F5EE` | Main canvas and light button text           |
+| Olive           | `#4D5A3E` | Primary buttons, links, and italic headings |
+| Deep olive      | `#2F3C2F` | Announcement, seal, and closing section     |
+| Pale sage       | `#E4E8DA` | Credentials and smile-gallery backgrounds   |
+| Warm stone      | `#EFEEE4` | Care-section background                     |
+| Champagne       | `#B5A17B` | Decorative marks and fine accents           |
+| Light champagne | `#DFD2B8` | Highlight text on deep olive                |
+
+Color tokens live at the top of `src/styles.css`. Body copy uses dark olive-charcoal; champagne on light backgrounds is limited to decoration. The favicon and browser theme color follow the same palette.
+
 ## Run locally
 
 Use Node 24 (see `.nvmrc`).
