@@ -22,8 +22,8 @@ export const copy = {
     announcement: 'A new chapter in personal dentistry',
     announcementLink: 'Follow our journey',
     eyebrow: 'GENERAL · COSMETIC · BIOMIMETIC',
-    heroLine1: 'A little artistry.',
-    heroLine2: 'A lot of care.',
+    heroLine1: 'Thoughtfully',
+    heroLine2: 'personal dentistry.',
     heroBody:
       'Dentistry that sees the person behind the smile. Thoughtful care, a natural aesthetic, and a relationship built around you.',
     heroLink: 'Meet your dentist',
@@ -168,8 +168,8 @@ export const copy = {
     announcement: 'Un nuevo capítulo en odontología personal',
     announcementLink: 'Acompáñanos',
     eyebrow: 'GENERAL · ESTÉTICA · BIOMIMÉTICA',
-    heroLine1: 'Un toque de arte.',
-    heroLine2: 'Mucho corazón.',
+    heroLine1: 'Odontología',
+    heroLine2: 'con un toque personal.',
     heroBody:
       'Odontología que ve a la persona detrás de la sonrisa. Cuidado atento, una estética natural y una relación que comienza contigo.',
     heroLink: 'Conoce a tu dentista',

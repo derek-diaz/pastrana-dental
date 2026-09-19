@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
 import { copy, practice, type Language } from './site'
+import BrandMonogram from './BrandMonogram'
 
 type Modal = 'contact' | 'privacy' | number | null
 
@@ -13,28 +14,6 @@ function Arrow({ diagonal = false }: { diagonal?: boolean }) {
         strokeWidth="1.4"
         strokeLinecap="round"
         strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
-
-function Sparkle({ className = '' }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 64 64"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path
-        d="M32 2c0 22-8 30-30 30 22 0 30 8 30 30 0-22 8-30 30-30C40 32 32 24 32 2Z"
-        stroke="currentColor"
-        strokeWidth="1"
-      />
-      <path
-        d="m11 11 42 42m0-42L11 53"
-        stroke="currentColor"
-        strokeWidth=".65"
       />
     </svg>
   )
@@ -56,9 +35,8 @@ function CareDrawing({ type }: { type: number }) {
       )}
       {type === 1 && (
         <>
-          <path d="M55 8c0 26-11 37-37 37 26 0 37 11 37 37 0-26 11-37 37-37C66 45 55 34 55 8Z" />
-          <circle cx="55" cy="45" r="29" />
-          <path d="M55 1v9m0 71v8M10 45h9m72 0h9" />
+          <path d="M18 32c20 10 54 10 74 0-5 26-19 40-37 40S23 58 18 32Z" />
+          <path d="M24 48c18 8 44 8 62 0M40 39l3 15m12-14v16m15-17-3 15" />
         </>
       )}
       {type === 2 && (
@@ -98,10 +76,9 @@ function Logo({ footer = false }: { footer?: boolean }) {
       className={`logo ${footer ? 'logo-footer' : ''}`}
       aria-label="Pastrana Dental — home"
     >
-      <span>
-        pastrana<span className="logo-dot">.</span>
-      </span>
-      <span className="logo-sub">D E N T A L</span>
+      <BrandMonogram />
+      <span className="logo-name">PASTRANA</span>
+      <span className="logo-sub">DENTAL</span>
     </a>
   )
 }
@@ -294,8 +271,7 @@ export default function App() {
               {c.eyebrow}
             </p>
             <h1 id="hero-heading">
-              {c.heroLine1}
-              <em>{c.heroLine2}</em>
+              {c.heroLine1} <em>{c.heroLine2}</em>
             </h1>
             <p className="hero-description">{c.heroBody}</p>
             <div className="hero-cta">
@@ -322,7 +298,7 @@ export default function App() {
             </div>
             <div className="personal-seal">
               <span>{c.stamp}</span>
-              <Sparkle />
+              <BrandMonogram />
               <span>{c.stampBottom}</span>
             </div>
             <div className="hero-caption">
@@ -330,7 +306,7 @@ export default function App() {
                 {c.heroCaption}
                 <small>{c.heroCaptionSub}</small>
               </span>
-              <Sparkle />
+              <BrandMonogram />
             </div>
             <span className="photo-side-note" aria-hidden="true">
               THE ART OF A PERSONAL SMILE
@@ -363,7 +339,7 @@ export default function App() {
           aria-labelledby="philosophy-heading"
         >
           <div className="centered-intro">
-            <Sparkle className="section-sparkle" />
+            <BrandMonogram className="section-monogram" />
             <p className="eyebrow">{c.philosophyLabel}</p>
             <h2 id="philosophy-heading">
               {c.philosophyTitle}
@@ -442,7 +418,7 @@ export default function App() {
             </div>
             <span className="doctor-photo-label">STEPHANIE PASTRANA, DMD</span>
             <div className="doctor-ornament" aria-hidden="true">
-              <Sparkle />
+              <BrandMonogram />
             </div>
           </div>
           <div className="doctor-copy">
@@ -523,7 +499,7 @@ export default function App() {
         </section>
 
         <section className="quote-section container">
-          <Sparkle className="section-sparkle" />
+          <BrandMonogram className="section-monogram" />
           <blockquote>“{c.quote}”</blockquote>
           <p className="eyebrow">{c.quoteAuthor}</p>
         </section>
@@ -556,7 +532,7 @@ export default function App() {
           <div className="contact-orbit orbit-one" aria-hidden="true" />
           <div className="contact-orbit orbit-two" aria-hidden="true" />
           <div className="container contact-inner">
-            <Sparkle className="section-sparkle" />
+            <BrandMonogram className="section-monogram" />
             <p className="eyebrow">{c.contactLabel}</p>
             <h2>
               {c.contactTitle}
@@ -648,7 +624,7 @@ export default function App() {
             </>
           ) : (
             <>
-              <Sparkle className="section-sparkle" />
+              <BrandMonogram className="section-monogram" />
               <p className="eyebrow">{c.dialogEyebrow}</p>
               <h2 id="dialog-heading">
                 {c.dialogTitle}

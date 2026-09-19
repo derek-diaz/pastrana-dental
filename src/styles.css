@@ -9,22 +9,22 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  /* Olive anchors the brand; champagne is reserved for ornament and dark surfaces. */
-  --paper: #f7f5ee;
-  --ink: #2e372c;
-  --brand: #4d5a3e;
-  --brand-hover: #39452f;
-  --brand-deep: #2f3c2f;
-  --muted: #626955;
-  --line: #d6d9c9;
-  --surface: #efeee4;
-  --sage: #e4e8da;
-  --sage-border: #bac2aa;
-  --olive-detail: #7b8667;
+  /* Stephanie's forest + ivory direction; brass is a small decorative accent. */
+  --paper: #f5f1e8;
+  --ink: #252a26;
+  --brand: #15251f;
+  --brand-hover: #294236;
+  --brand-deep: #15251f;
+  --muted: #5d665c;
+  --line: #d9d9cc;
+  --surface: #ecebe2;
+  --sage: #e8ebe3;
+  --sage-border: #bac3b5;
+  --olive-detail: #7b8975;
   --champagne: #b5a17b;
   --champagne-light: #dfd2b8;
-  --on-dark-muted: #dde2d3;
-  --selection: #d9decc;
+  --on-dark-muted: #e2dfd5;
+  --selection: #dce2d7;
   --serif: 'Cormorant Garamond', Georgia, serif;
 }
 * {
@@ -177,7 +177,7 @@ img {
   padding: 12px 19px;
   gap: 22px;
 }
-.section-sparkle {
+.section-monogram {
   width: 37px;
   height: 37px;
   color: var(--champagne);
@@ -235,7 +235,7 @@ img {
   outline-color: var(--champagne-light);
 }
 .site-header {
-  background: rgba(247, 245, 238, 0.97);
+  background: rgba(245, 241, 232, 0.97);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -252,22 +252,28 @@ img {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  line-height: 0.85;
+  justify-content: center;
+  gap: 4px;
+  width: 178px;
+  color: var(--brand);
+  line-height: 1;
   flex-shrink: 0;
 }
-.logo > span:first-child {
-  font-family: var(--serif);
-  font-size: 43px;
-  letter-spacing: -0.055em;
+.logo .brand-monogram {
+  width: 31px;
+  height: 39px;
 }
-.logo-dot {
-  color: var(--champagne);
+.logo-name {
+  font-family: var(--serif);
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: 0.24em;
+  margin-right: -0.24em;
 }
 .logo .logo-sub {
-  font-size: 9px;
-  letter-spacing: 0.32em;
-  margin-top: 12px;
-  margin-left: 4px;
+  font-size: 7px;
+  letter-spacing: 0.64em;
+  margin-right: -0.64em;
 }
 .main-nav {
   display: flex;
@@ -349,8 +355,8 @@ img {
   display: inline-block;
 }
 .hero h1 {
-  font-size: clamp(62px, 6.6vw, 97px);
-  white-space: nowrap;
+  font-size: clamp(48px, 5.7vw, 84px);
+  white-space: normal;
   line-height: 0.99;
   letter-spacing: -0.055em;
 }
@@ -426,8 +432,7 @@ img {
   align-items: center;
   justify-content: center;
   gap: 9px;
-  transform: rotate(-13deg);
-  color: var(--champagne-light);
+  color: var(--paper);
 }
 .personal-seal span {
   font-size: 7px;
@@ -437,6 +442,7 @@ img {
 .personal-seal svg {
   width: 33px;
   height: 33px;
+  color: var(--champagne-light);
 }
 .hero-caption {
   display: flex;
@@ -510,7 +516,7 @@ img {
   max-width: 760px;
   margin: auto;
 }
-.centered-intro > .section-sparkle {
+.centered-intro > .section-monogram {
   margin: 0 auto 23px;
 }
 .centered-intro > .eyebrow {
@@ -721,7 +727,7 @@ img {
 .doctor-ornament svg {
   width: 48px;
   height: 48px;
-  color: var(--champagne);
+  color: var(--brand);
 }
 .doctor-copy .eyebrow {
   margin-bottom: 22px;
@@ -806,7 +812,7 @@ img {
 .comparison-label {
   position: absolute;
   top: 13px;
-  background: rgba(247, 245, 238, 0.94);
+  background: rgba(245, 241, 232, 0.94);
   font-size: 9px;
   padding: 6px 11px;
   color: var(--ink);
@@ -879,7 +885,7 @@ img {
   text-align: center;
   border-bottom: 1px solid var(--line);
 }
-.quote-section .section-sparkle {
+.quote-section .section-monogram {
   margin: auto auto 24px;
   width: 28px;
   height: 28px;
@@ -969,12 +975,12 @@ img {
   position: relative;
   z-index: 1;
 }
-.contact-inner .section-sparkle {
+.contact-inner .section-monogram {
   color: var(--champagne);
   margin: 0 auto 22px;
 }
 .contact-inner .eyebrow {
-  color: var(--champagne-light);
+  color: var(--on-dark-muted);
   font-size: 8px;
 }
 .contact-inner h2 {
@@ -982,7 +988,7 @@ img {
   margin-top: 23px;
 }
 .contact-inner h2 em {
-  color: var(--champagne-light);
+  color: var(--paper);
 }
 .contact-body {
   max-width: 430px;
@@ -1037,8 +1043,19 @@ img {
   gap: 50px;
   padding-bottom: 54px;
 }
-.logo-footer > span:first-child {
-  font-size: 48px;
+.logo-footer {
+  width: 230px;
+  gap: 7px;
+}
+.logo-footer .brand-monogram {
+  width: 52px;
+  height: 66px;
+}
+.logo-footer .logo-name {
+  font-size: 32px;
+}
+.logo-footer .logo-sub {
+  font-size: 9px;
 }
 .footer-main > div:first-child > p {
   font-size: 10px;
@@ -1145,7 +1162,7 @@ dialog::backdrop {
 .dialog-close span:last-child {
   transform: rotate(-45deg);
 }
-.dialog-content > .section-sparkle {
+.dialog-content > .section-monogram {
   margin-bottom: 25px;
 }
 .dialog-content > .eyebrow {
@@ -1182,7 +1199,7 @@ dialog::backdrop {
     max-width: 560px;
   }
   .hero h1 {
-    font-size: 101px;
+    font-size: 88px;
   }
 }
 @media (max-width: 1150px) {
@@ -1205,7 +1222,7 @@ dialog::backdrop {
     gap: 45px;
   }
   .hero h1 {
-    font-size: 7vw;
+    font-size: 6vw;
   }
   .hero-eyebrow {
     font-size: 8px;
@@ -1277,7 +1294,7 @@ dialog::backdrop {
     gap: 34px;
   }
   .hero h1 {
-    font-size: 7.2vw;
+    font-size: 6.1vw;
   }
   .hero-cta {
     gap: 14px;
@@ -1405,12 +1422,18 @@ dialog::backdrop {
     height: 77px;
     gap: 18px;
   }
-  .logo > span:first-child {
-    font-size: 35px;
+  .logo {
+    width: 134px;
+  }
+  .logo .brand-monogram {
+    width: 23px;
+    height: 29px;
+  }
+  .logo .logo-name {
+    font-size: 18px;
   }
   .logo .logo-sub {
-    font-size: 7px;
-    margin-top: 10px;
+    font-size: 6px;
   }
   .header-actions {
     gap: 22px;
@@ -1485,7 +1508,7 @@ dialog::backdrop {
     width: 23px;
   }
   .hero h1 {
-    font-size: clamp(53px, 11.9vw, 78px);
+    font-size: clamp(45px, 10.4vw, 68px);
     line-height: 1;
     letter-spacing: -0.047em;
     white-space: normal;
@@ -1590,7 +1613,7 @@ dialog::backdrop {
   .section-pad {
     padding-block: 66px;
   }
-  .centered-intro > .section-sparkle {
+  .centered-intro > .section-monogram {
     width: 30px;
     height: 30px;
     margin-bottom: 20px;
@@ -1777,7 +1800,7 @@ dialog::backdrop {
   .quote-section .eyebrow {
     font-size: 7px;
   }
-  .quote-section .section-sparkle {
+  .quote-section .section-monogram {
     width: 26px;
     height: 26px;
   }
@@ -1808,7 +1831,7 @@ dialog::backdrop {
     font-size: 7px;
     letter-spacing: 0.15em;
   }
-  .contact-inner .section-sparkle {
+  .contact-inner .section-monogram {
     width: 30px;
     height: 30px;
   }
@@ -1842,8 +1865,18 @@ dialog::backdrop {
   .footer-main > div:first-child {
     grid-column: 1/-1;
   }
-  .logo-footer > span:first-child {
-    font-size: 44px;
+  .logo-footer {
+    width: 204px;
+  }
+  .logo-footer .brand-monogram {
+    width: 44px;
+    height: 56px;
+  }
+  .logo-footer .logo-name {
+    font-size: 28px;
+  }
+  .logo-footer .logo-sub {
+    font-size: 8px;
   }
   .footer-main > div:first-child > p {
     margin-top: 20px;
@@ -1901,7 +1934,7 @@ dialog::backdrop {
     width: calc(100% - 36px);
   }
   .hero h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
   .announcement {
     font-size: 7px;

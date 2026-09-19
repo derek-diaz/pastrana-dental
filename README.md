@@ -4,19 +4,21 @@ A warm, editorial website for Dr. Stephanie Pastrana, built with React, TypeScri
 
 ## Visual palette
 
-The palette follows Stephanie's olive-green preference while keeping the existing wordmark and layout. The supplied logo and office mockups are visual references only; they are not presented as an actual clinic or used as replacement logos.
+The branding follows Stephanie's latest reference: a serif P monogram above a widely spaced uppercase PASTRANA / DENTAL wordmark. The monogram is drawn as a vector in `src/BrandMonogram.tsx`, with the same shape in the favicon and the small section ornaments; it replaces the earlier star motif. The wordmark uses the locally hosted Cormorant Garamond and DM Sans fonts.
 
-| Color           | Hex       | Role                                        |
-| --------------- | --------- | ------------------------------------------- |
-| Warm ivory      | `#F7F5EE` | Main canvas and light button text           |
-| Olive           | `#4D5A3E` | Primary buttons, links, and italic headings |
-| Deep olive      | `#2F3C2F` | Announcement, seal, and closing section     |
-| Pale sage       | `#E4E8DA` | Credentials and smile-gallery backgrounds   |
-| Warm stone      | `#EFEEE4` | Care-section background                     |
-| Champagne       | `#B5A17B` | Decorative marks and fine accents           |
-| Light champagne | `#DFD2B8` | Highlight text on deep olive                |
+The main headline is “Thoughtfully personal dentistry.” (“Odontología con un toque personal.” in Spanish). The airy green-and-ivory treatment, philosophy section, and Instagram-linked before/after feature carry forward the elements Stephanie liked. Her supplied website and office mockups are visual references only; their generated people, premises, equipment, and unconfirmed services or contact details are not used as facts about this practice.
 
-Color tokens live at the top of `src/styles.css`. Body copy uses dark olive-charcoal; champagne on light backgrounds is limited to decoration. The favicon and browser theme color follow the same palette.
+| Color           | Hex       | Role                                      |
+| --------------- | --------- | ----------------------------------------- |
+| Warm ivory      | `#F5F1E8` | Main canvas and text on green             |
+| Forest green    | `#15251F` | Primary brand, buttons, and dark sections |
+| Charcoal/forest | `#252A26` | Main text on ivory                        |
+| Pale sage       | `#E8EBE3` | Credentials and smile-gallery backgrounds |
+| Warm stone      | `#ECEBE2` | Care-section background                   |
+| Champagne       | `#B5A17B` | Decorative marks and fine accents         |
+| Light champagne | `#DFD2B8` | Small monograms and focus rings on forest |
+
+Color tokens live at the top of `src/styles.css`. Green and ivory dominate, including the large closing headline. Champagne is used for small decorative marks and fine accents. The optional terracotta accent is omitted to keep this direction focused. The favicon and browser theme color follow the same palette.
 
 ## Run locally
 
